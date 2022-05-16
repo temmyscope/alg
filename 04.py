@@ -9,9 +9,9 @@ def getLongestPalindrome(word: str):
     reversedWord: str = ''.join(reversedWordList)
     length = len(word)
 
-    streakHasEnded = False
-    streakList = []
-    streak = ""
+    streakHasEnded: bool = False
+    streakList: list = []
+    streak: str = ""
 
     for i  in range(length):
         if reversedWord[i] == word[i]:
@@ -22,10 +22,10 @@ def getLongestPalindrome(word: str):
                 streak = streak + word[i]
                 streakHasEnded = False
         else:
-            streakHasEnded = True
-
+            streakHasEnded: bool = True
+        
         streakList.append(streak)
-    
+    #return longest palindromic string
     return max(streakList, key=len)
 
 print(
