@@ -21,3 +21,8 @@ def getNonRepetitiveStrLength(word: str):
     encounteredStr.sort( key=len )
 
     return [ encounteredStr[-1], len( encounteredStr[-1] ) ]
+
+
+print (
+    getNonRepetitiveStrLength("abcabcbb")
+)
